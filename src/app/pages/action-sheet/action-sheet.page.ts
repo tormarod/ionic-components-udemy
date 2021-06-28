@@ -19,35 +19,36 @@ export class ActionSheetPage implements OnInit {
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Albums',
-      cssClass: 'my-custom-class',
+      backdropDismiss: false,
       buttons: [{
         text: 'Delete',
         role: 'destructive',
-        icon: 'trash',
+        icon: 'trash-outline',
+        cssClass: 'rojo',
         handler: () => {
           console.log('Delete clicked');
         }
       }, {
         text: 'Share',
-        icon: 'share',
+        icon: 'share-outline',
         handler: () => {
           console.log('Share clicked');
         }
       }, {
         text: 'Play (open modal)',
-        icon: 'caret-forward-circle',
+        icon: 'caret-forward-circle-outline',
         handler: () => {
           console.log('Play clicked');
         }
       }, {
         text: 'Favorite',
-        icon: 'heart',
+        icon: 'heart-outline',
         handler: () => {
           console.log('Favorite clicked');
         }
       }, {
         text: 'Cancel',
-        icon: 'close',
+        icon: 'close-outline',
         role: 'cancel',
         handler: () => {
           console.log('Cancel clicked');
